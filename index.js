@@ -5,7 +5,7 @@ const weatherDetails = document.querySelector(".weather-details");
 const error404 = document.querySelector(".not-found");
 
 search.addEventListener("click", () => {
-  const APIkey = "8f4b11cc59499fa995620c8defa8fd81";
+  const APIKey = "8f4b11cc59499fa995620c8defa8fd81";
   const city = document.querySelector(".search-box input").value;
 
   if (city === "") return;
@@ -16,7 +16,7 @@ search.addEventListener("click", () => {
     .then((response) => response.json())
     .then((json) => {
       if (json.cod === "404") {
-        container.style.height = " 400px";
+        container.style.height = "400px";
         weatherBox.style.display = "none";
         weatherDetails.style.display = "none";
         error404.style.display = "block";
@@ -49,11 +49,11 @@ search.addEventListener("click", () => {
           break;
 
         case "Clouds":
-          image.src = "images/clouds.png";
+          image.src = "images/cloud.png";
           break;
 
         case "Haze":
-          image.src = "images/haze.png";
+          image.src = "images/mist.png";
           break;
 
         default:
